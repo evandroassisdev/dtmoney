@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { darken, transparentize } from 'polished'
+import { darken, transparentize } from 'polished';
 
 export const Container = styled.form`
   h2 {
@@ -13,7 +13,6 @@ export const Container = styled.form`
     padding: 0 1.5rem;
     height: 4rem;
     border-radius: 0.25rem;
-
     border: 1px solid #d7d7d7;
     background: #e7e9ee;
 
@@ -21,7 +20,7 @@ export const Container = styled.form`
     font-size: 1rem;
 
     &::placeholder {
-      color: var(--text-body)
+      color: var(--text-body);
     }
 
     & + input {
@@ -56,44 +55,43 @@ export const TransactionTypeContainer = styled.div`
   gap: 0.5rem;
 `;
 
-interface RadioBoxProps {
+interface ButtonRadioProps {
   isActive: boolean;
-  activeColor: 'green' | 'red';
+  color: 'red' | 'green';
 }
-
 
 const colors = {
-  green: '#33cc95',
-  red: '#e52e4d'
+  red: '#e52e4d',
+  green: '#33cc95'
 }
 
-export const RadioBox = styled.button<RadioBoxProps>`
+export const ButtonRadio = styled.button<ButtonRadioProps>`
+  
   height: 4rem;
-  border: 1px solid #d7d7d7;
-  border-radius: 0.25rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 0.25rem;
 
-  background: ${(props) =>
-    props.isActive ? transparentize(0.9, colors[props.activeColor]) : 'transparent'};
+    background: ${({ isActive, color }) => isActive ? transparentize(0.9, colors[color]) : 'transparent'};
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  transition: border 0.2s;
+    transition: border-color 0.2s;
 
-  &:hover {
-    border-color: ${darken(0.1, '#d7d7d7')};
-  }
+    &:hover {
+      border-color: ${darken(0.15, '#d7d7d7')};
+    }
 
-  img {
-    width: 20px;
-    height: 20px;
-  }
+    img {
+      width: 20px;
+      height: 20px;
+    }
 
-  span {
-    display: block;
-    margin-left: 1rem;
-    font-size: 1rem;
-    color: var(--text-title);
-  }
+    span {
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 1rem;
+      color: var(--text-title);
+    }
 `;

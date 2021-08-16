@@ -12,7 +12,6 @@ export const Container = styled.div`
       font-weight: 400;
       padding: 1rem 2rem;
       text-align: left;
-      line-height: 1.5rem;
     }
 
     td {
@@ -26,12 +25,12 @@ export const Container = styled.div`
         color: var(--text-title);
       }
 
-      &.deposit {
-        color: var(--green);
-      }
-
       &.withdraw {
         color: var(--red);
+      }
+
+      &.deposit {
+        color: var(--green);
       }
     }
   }

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
@@ -25,9 +25,10 @@ export const Container = styled.div`
       font-weight: 500;
       line-height: 3rem;
     }
-    &.highlight-background {
+
+    & + div + div {
       background: var(--green);
-      color: #fff
+      color: #fff;
     }
   }
 `;

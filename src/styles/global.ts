@@ -2,16 +2,16 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --background: #f0f2f5;
     --red: #e52e4d;
-    --green: #33cc95;
     --blue: #5429cc;
+    --green: #33cc95;
 
     --blue-light: #6933ff;
 
-    --text-litle: #363f5f;
+    --text-title: #363f5f;
     --text-body: #969cb3;
 
+    --background: #f0f2f5;
     --shape: #ffffff;
   }
 
@@ -23,11 +23,11 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     @media (max-width: 1080px) {
-      font-size: 93.75%;
+      font-size: 93.75%
     }
 
     @media (max-width: 720px) {
-      font-size: 87.5%;
+      font-size: 87.5%
     }
   }
 
@@ -55,13 +55,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .react-modal-overlay {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
 
     display: flex;
     align-items: center;
@@ -83,6 +83,7 @@ export const GlobalStyle = createGlobalStyle`
     top: 1.5rem;
     border: 0;
     background: transparent;
+
     transition: filter 0.2s;
 
     &:hover {
